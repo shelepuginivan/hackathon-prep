@@ -1,0 +1,9 @@
+nimbus = int(input())akihabara = int(input())
+bubble = int(input())time = 0
+chtoto = 0count = nimbus
+while count - chtoto > 2:   m1 = chtoto + (count - chtoto) // 3
+   m2 = count - (count - chtoto) // 3   time1 = akihabara * m1 + 2 * akihabara + 2 * (nimbus - 1 - m1) * bubble
+   time2 = akihabara * m2 + 2 * akihabara + 2 * (nimbus - 1 - m2) * bubble   if time1 < time2:
+       chtoto = m1   else:
+       count = m2time = 2 * akihabara + max(akihabara * chtoto + 2 * (nimbus - 1 - chtoto) * bubble, akihabara * (chtoto + 1) + 2 * (nimbus - 2 - chtoto) * bubble)
+print(time)
